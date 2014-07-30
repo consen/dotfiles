@@ -70,7 +70,7 @@ if has("gui_running")
 endif
 
 " Hightlight current line and column.
-"set cursorline
+set cursorline
 "set cursorcolumn
 
 " Initial window size
