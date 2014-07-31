@@ -1,0 +1,7 @@
+[user]
+	name = consen
+	email = 1186508815@qq.com
+[color]
+	ui = true
+[credential]
+	helper = cache --timeout=3600
