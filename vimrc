@@ -1,7 +1,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Maintainer: Consen
-" Last Change: 2014-07-22 09:42:10 [2]
-" Version: 0.8
+" Version: 0.9
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use Vim settings, rather than Vi settings(much better!).
 " This must be first, because it changes other options as a side effect.
@@ -280,11 +279,6 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 """""""""""""""""""""""""""""
-" Monokai
-"""""""""""""""""""""""""""""
-colorscheme monokai
-
-"""""""""""""""""""""""""""""
 " Solarized
 """""""""""""""""""""""""""""
 "set background=dark
@@ -295,9 +289,20 @@ colorscheme monokai
 """""""""""""""""""""""""""""
 " Molokai
 """""""""""""""""""""""""""""
-"colorscheme molokai
-"let g:molokai_original = 1
+set t_Co=256
+let g:molokai_original = 1
 "let g:rehash256 = 1
+colorscheme molokai
+" In molokai.vim reset values:
+" 150 hi String ctermfg=186
+" 139 hi Normal ctermfg=253     ctermbg=235
+" 215 hi Todo   ctermfg=231     ctermbg=NONE    cterm=inverse,bold
+" 223 hi Visual                 ctermbg=237
+
+"""""""""""""""""""""""""""""
+" Monokai
+"""""""""""""""""""""""""""""
+"colorscheme monokai
 
 """""""""""""""""""""""""""""
 " SnipMate
