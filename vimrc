@@ -1,5 +1,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Maintainer: Consen
+" Last Change: 2014-07-31 14:16:24 [4]
 " Version: 0.9
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use Vim settings, rather than Vi settings(much better!).
@@ -147,8 +148,8 @@ set noswapfile
 " To insert timestamp, press F3.
 " %w is replaced by the weekday as a decimal number [0, 6],
 " with 0 representing Sunday.
-"nmap <F3> a<C-R>=strftime("%Y-%m-%d %H:%M:%S [%w]")<CR><Esc>
-"imap <F3> <C-R>=strftime("%Y-%m-%d %H:%M:%S [%w]")<CR>
+nmap <F3> a<C-R>=strftime("%Y-%m-%d %H:%M:%S [%w]")<CR><Esc>
+imap <F3> <C-R>=strftime("%Y-%m-%d %H:%M:%S [%w]")<CR>
 
 " To save, press ctrl-s.
 "nmap <c-s> :w<CR>
