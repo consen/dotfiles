@@ -1,6 +1,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Maintainer: Consen
-" Last Change: 2014-07-31 14:16:24 [4]
+" Last Change: 2014-07-31 14:33:17 [4]
 " Version: 0.9
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use Vim settings, rather than Vi settings(much better!).
@@ -202,6 +202,8 @@ imap <F3> <C-R>=strftime("%Y-%m-%d %H:%M:%S [%w]")<CR>
 """"""""""""""""""""""""
 " Vundle
 """"""""""""""""""""""""
+" TODO install Vundle 
+" git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -295,7 +297,7 @@ set t_Co=256
 let g:molokai_original = 1
 "let g:rehash256 = 1
 colorscheme molokai
-" In molokai.vim reset values:
+" TODO In molokai.vim reset values:
 " 150 hi String ctermfg=186
 " 139 hi Normal ctermfg=253     ctermbg=235
 " 215 hi Todo   ctermfg=231     ctermbg=NONE    cterm=inverse,bold
