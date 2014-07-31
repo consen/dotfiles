@@ -39,7 +39,8 @@ set backspace=2
 "set backspace=indent, eol, start
 
 " Enable mouse in all modes
-set mouse=a
+" (can't select and copy using right click)
+"set mouse=a
 
 " Automatically indent when add a curly bracket, etc.
 set smartindent
