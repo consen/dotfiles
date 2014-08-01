@@ -4,7 +4,14 @@ Backup, restore, and sync the prefs and settings for my toolbox.
 
 ## Installation
 
-### vimrc
+
+### Git
+
+```
+$ copy gitconfig ~/.gitconfig
+```
+
+### Vim
 
 ###### 1. install vimrc
 
@@ -24,14 +31,19 @@ Now you can use your brand new and amazing **vim**. The color scheme is [molokai
 
 ![vim screenshot](img/vim.png)
 
-### xShell Color Scheme
+### xShell
 
 In menu **Tools**, open **Color Schemes** dialog, then **Import** xShell_color_scheme.xcs, select **taste** in color scheme list.
 
 ![xShell screenshot](img/xShell.png)
 
-### gitconfig
+### Sublime Text
 
-```
-$ copy gitconfig ~/.gitconfig
-```
+Place these files in Packages/User directory.
+
+* Windows `%HOMEPATH%\AppData\Roaming\Sublime Text 3\Packages\User`
+* Linux `~/.config/sublime-text-3/Packages/User`
+
+1. Preferences.sublime-settings ---- **Preferences > Setttings - User**
+2. Package Control.sublime-settings ---- **Preferences > Package Settings > Package Control > Settings – User**, installed packages. (First install [Package Control](https://sublime.wbond.net))
+3. Default(Windows).sublime-keymap ---- **Preferences > Key Bindings - User** 

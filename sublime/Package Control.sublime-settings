@@ -1,0 +1,21 @@
+{
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"Alignment",
+		"All Autocomplete",
+		"ConvertToUTF8",
+		"DocBlockr",
+		"FindKeyConflicts",
+		"HTMLBeautify",
+		"Indent XML",
+		"Markdown Preview",
+		"PackageResourceViewer",
+		"PlainTasks",
+		"Python PEP8 Autoformat",
+		"StringUtilities",
+		"SublimeCodeIntel",
+		"SublimeREPL",
+		"Theme - Soda",
+	]
+}

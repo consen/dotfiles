@@ -1,0 +1,20 @@
+{
+	"bold_folder_labels": false,
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"font_options":
+	[
+		"directwrite"
+	],
+	"font_size": 11,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"show_encoding": true,
+	"show_line_endings": true,
+	"soda_classic_tabs": true,
+	"tab_size": 4,
+	"theme": "Soda Dark 3.sublime-theme",
+	"translate_tabs_to_spaces": false,
+	"trim_trailing_white_space_on_save": true
+}
