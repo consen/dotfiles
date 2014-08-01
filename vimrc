@@ -126,8 +126,9 @@ set pumheight=15
 set laststatus=2
 " Format the status line.
 set statusline=
-set statusline+=[CWD:\ %{getcwd()}]				" current working directory
-set statusline+=\ \ \ \ [%n/%{bufnr('$')}]		" buffer number / buffer count
+"set statusline+=[CWD:\ %{getcwd()}]				" current working directory
+"set statusline+=\ \ \ \ [%n/%{bufnr('$')}]		" buffer number / buffer count
+set statusline+=[%n/%{bufnr('$')}]		" buffer number / buffer count
 set statusline+=%r								" read only flag
 set statusline+=[%F]							" full path
 set statusline+=\ [%{strlen(&ft)?&ft:'none'}]	" filetype
@@ -230,7 +231,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'tomasr/molokai'
 Plugin 'junegunn/goyo.vim'
 Plugin 'yonchu/accelerated-smooth-scroll'
-"Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 "Bundle 'scrooloose/nerdtree'
 "Bundle 'msanders/snipmate.vim'
 "Bundle 'uguu-org/vim-matrix-screensaver'
