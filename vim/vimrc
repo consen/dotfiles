@@ -222,18 +222,21 @@ Plugin 'gmarik/Vundle.vim'
 
 " plugin on GitHub repo
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'kien/ctrlp.vim'
-Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdcommenter.git'
+Plugin 'tpope/vim-surround'
+Plugin 'godlygeek/tabular'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
+
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
+
 Plugin 'sickill/vim-monokai'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tomasr/molokai'
+
 Plugin 'junegunn/goyo.vim'
 Plugin 'yonchu/accelerated-smooth-scroll'
-Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/nerdtree'
-Plugin 'godlygeek/tabular'
 "Bundle 'msanders/snipmate.vim'
 "Bundle 'uguu-org/vim-matrix-screensaver'
 "Bundle 'bling/vim-airline'
