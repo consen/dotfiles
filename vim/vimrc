@@ -223,6 +223,7 @@ Plugin 'gmarik/Vundle.vim'
 " plugin on GitHub repo
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/nerdcommenter.git'
+Plugin 'Raimondi/delimitMate'
 Plugin 'tpope/vim-surround'
 Plugin 'godlygeek/tabular'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
@@ -323,3 +324,8 @@ colorscheme molokai
 """""""""""""""""""""""""""""
 "let NERDTreeIgnore=['\~$[[file]]', '\.o$[[filie]]', '\.exe$[[file]]', '\.pyc$[[file]]',
 "			\		'\.obj$[[file]]', '\.dll$[[file]]', '\.lib$[[file]]', '\.a$[[file]]']
+
+"""""""""""""""""""""""""""""
+" delimitMate
+"""""""""""""""""""""""""""""
+let delimitMate_matchpairs = "(:),[:],{:}"
