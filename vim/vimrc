@@ -226,6 +226,7 @@ Plugin 'scrooloose/nerdcommenter.git'
 Plugin 'Raimondi/delimitMate'
 Plugin 'tpope/vim-surround'
 Plugin 'godlygeek/tabular'
+Plugin 'vim-scripts/AutoComplPop'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 
 Plugin 'tpope/vim-fugitive'
@@ -329,3 +330,8 @@ colorscheme molokai
 " delimitMate
 """""""""""""""""""""""""""""
 let delimitMate_matchpairs = "(:),[:],{:}"
+
+"""""""""""""""""""""""""""""
+" AutoComplPop 
+"""""""""""""""""""""""""""""
+let g:acp_behaviorKeywordLength = 1
