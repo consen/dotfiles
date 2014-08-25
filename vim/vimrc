@@ -232,6 +232,7 @@ Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
+Plugin 'sjl/gundo.vim'
 
 Plugin 'sickill/vim-monokai'
 Plugin 'altercation/vim-colors-solarized'
