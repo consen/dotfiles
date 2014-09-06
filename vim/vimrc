@@ -13,7 +13,7 @@ set nocompatible
 " Set how many lines of history VIM has to remember.
 set history=2048
 
-" Enable filetype plugins. 
+" Enable filetype plugins.
 filetype plugin on
 filetype indent on
 
@@ -105,7 +105,7 @@ set wildignore=*.o,*.obj,*.dll,*.exe,*~,*.pyc
 "set showmatch
 " ... but 1 tenths of a second to blink when matching brackets.
 "set matchtime=1
-" Set pairs including '<' and '>'. 
+" Set pairs including '<' and '>'.
 set matchpairs+=<:>
 
 " Lines longer than the width of the window will wrap.
@@ -203,7 +203,7 @@ imap <F3> <C-R>=strftime("%Y-%m-%d %H:%M:%S [%w]")<CR>
 """"""""""""""""""""""""
 " Vundle
 """"""""""""""""""""""""
-" TODO install Vundle 
+" TODO install Vundle
 " git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -226,6 +226,7 @@ Plugin 'scrooloose/nerdcommenter.git'
 Plugin 'Raimondi/delimitMate'
 Plugin 'tpope/vim-surround'
 Plugin 'godlygeek/tabular'
+Plugin 'itspriddle/vim-stripper'
 Plugin 'vim-scripts/AutoComplPop'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 
@@ -275,7 +276,7 @@ filetype plugin indent on    " required
 " Goyo
 """""""""""""""""""""""""""""
 let g:goyo_margin_top = 2
-let g:goyo_margin_bottom = 2 
+let g:goyo_margin_bottom = 2
 
 """""""""""""""""""""""""""""
 " CtrlP
@@ -333,6 +334,12 @@ colorscheme molokai
 let delimitMate_matchpairs = "(:),[:],{:}"
 
 """""""""""""""""""""""""""""
-" AutoComplPop 
+" AutoComplPop
 """""""""""""""""""""""""""""
 let g:acp_behaviorKeywordLength = 1
+
+"""""""""""""""""""""""""""""
+" Stripper
+"""""""""""""""""""""""""""""
+let g:StripperNoStripOnSave = 1
+
