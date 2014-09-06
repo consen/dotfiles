@@ -5,13 +5,13 @@ Backup, restore, and sync the prefs and settings for my toolbox.
 ## Installation
 
 
-### Git
+#### Git
 
 ```
 $ copy gitconfig ~/.gitconfig
 ```
 
-### Vim
+#### Vim
 
 ###### 1. install vimrc
 
@@ -31,13 +31,13 @@ Now you can use your brand new and amazing **vim**. The color scheme is [molokai
 
 ![vim screenshot](img/vim.png)
 
-### xShell
+#### xShell
 
 In menu **Tools**, open **Color Schemes** dialog, then **Import** xShell_color_scheme.xcs, select **taste** in color scheme list.
 
 ![xShell screenshot](img/xShell.png)
 
-### Sublime Text
+#### Sublime Text
 
 Place these files in Packages/User directory.
 
@@ -46,4 +46,16 @@ Place these files in Packages/User directory.
 
 1. Preferences.sublime-settings ---- **Preferences > Setttings - User**
 2. Package Control.sublime-settings ---- **Preferences > Package Settings > Package Control > Settings – User**, installed packages. (First install [Package Control](https://sublime.wbond.net))
-3. Default(Windows).sublime-keymap ---- **Preferences > Key Bindings - User** 
+3. Default(Windows).sublime-keymap ---- **Preferences > Key Bindings - User**
+
+## Workflow
+
+#### Vim
+
+###### 1. vim-stripper
+
+Strip trailing whitespace:
+
+```
+:Stripper
+```
