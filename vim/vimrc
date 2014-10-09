@@ -126,9 +126,9 @@ set pumheight=15
 set laststatus=2
 " Format the status line.
 set statusline=
-"set statusline+=[CWD:\ %{getcwd()}]				" current working directory
+"set statusline+=[CWD:\ %{getcwd()}]			" current working directory
 "set statusline+=\ \ \ \ [%n/%{bufnr('$')}]		" buffer number / buffer count
-set statusline+=[%n/%{bufnr('$')}]		" buffer number / buffer count
+set statusline+=[%n/%{bufnr('$')}]		        " buffer number / buffer count
 set statusline+=%r								" read only flag
 set statusline+=[%F]							" full path
 set statusline+=\ [%{strlen(&ft)?&ft:'none'}]	" filetype
@@ -307,10 +307,12 @@ let g:molokai_original = 1
 "let g:rehash256 = 1
 colorscheme molokai
 " TODO In molokai.vim reset values:
-" 150 hi String ctermfg=186
 " 139 hi Normal ctermfg=253     ctermbg=235
-" 215 hi Todo   ctermfg=231     ctermbg=NONE    cterm=inverse,bold
-" 223 hi Visual                 ctermbg=237
+
+hi String       ctermfg=186
+hi Todo         ctermfg=231     ctermbg=NONE    cterm=inverse,bold
+hi Visual                       ctermbg=237
+hi StatusLine   ctermfg=236     ctermbg=242     cterm=reverse
 
 """""""""""""""""""""""""""""
 " Monokai
