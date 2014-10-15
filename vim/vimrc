@@ -1,6 +1,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Maintainer: Consen
-" Last Change: 2014-07-31 14:33:17 [4]
+" Last Change: 2014-10-15 09:54:26 [3]
 " Version: 0.9
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use Vim settings, rather than Vi settings(much better!).
@@ -232,6 +232,7 @@ Plugin 'vim-scripts/DoxygenToolkit.vim'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
+Plugin 'majutsushi/tagbar'
 Plugin 'kien/ctrlp.vim'
 Plugin 'sjl/gundo.vim'
 
@@ -345,3 +346,7 @@ let g:acp_behaviorKeywordLength = 1
 """""""""""""""""""""""""""""
 let g:StripperNoStripOnSave = 1
 
+"""""""""""""""""""""""""""""
+" Tagbar
+"""""""""""""""""""""""""""""
+nnoremap <silent> <F9> :TagbarToggle<CR>
