@@ -328,8 +328,8 @@ hi StatusLine   ctermfg=236     ctermbg=242     cterm=reverse
 """""""""""""""""""""""""""""
 " NERDTree
 """""""""""""""""""""""""""""
-"let NERDTreeIgnore=['\~$[[file]]', '\.o$[[filie]]', '\.exe$[[file]]', '\.pyc$[[file]]',
-"			\		'\.obj$[[file]]', '\.dll$[[file]]', '\.lib$[[file]]', '\.a$[[file]]']
+nnoremap <silent> <F8> :NERDTreeToggle<CR>
+let NERDTreeIgnore=['\~$', '\.o$', '\.so$', '\.a$', '\.exe$', '\.pyc$']
 
 """""""""""""""""""""""""""""
 " delimitMate
