@@ -350,3 +350,4 @@ let g:StripperNoStripOnSave = 1
 " Tagbar
 """""""""""""""""""""""""""""
 nnoremap <silent> <F9> :TagbarToggle<CR>
+let g:tagbar_autofocus = 1
