@@ -243,6 +243,7 @@ Plugin 'tomasr/molokai'
 
 Plugin 'junegunn/goyo.vim'
 Plugin 'yonchu/accelerated-smooth-scroll'
+Plugin 'kien/rainbow_parentheses.vim'
 "Bundle 'msanders/snipmate.vim'
 "Bundle 'uguu-org/vim-matrix-screensaver'
 "Bundle 'bling/vim-airline'
