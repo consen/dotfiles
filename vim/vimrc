@@ -1,6 +1,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Maintainer: Consen
-" Last Change: 2014-10-15 09:54:26 [3]
+" Last Change: 2014-10-22 10:13:13 [3]
 " Version: 0.9
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use Vim settings, rather than Vi settings(much better!).
@@ -235,6 +235,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'kien/ctrlp.vim'
 Plugin 'sjl/gundo.vim'
+Plugin 'klen/python-mode'
 
 Plugin 'sickill/vim-monokai'
 Plugin 'altercation/vim-colors-solarized'
@@ -351,3 +352,12 @@ let g:StripperNoStripOnSave = 1
 """""""""""""""""""""""""""""
 nnoremap <silent> <F9> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
+
+"""""""""""""""""""""""""""""
+" Python-mode
+"""""""""""""""""""""""""""""
+let g:pymode_run_bind = "<F5>"
+let g:pymode_rope_goto_definition_bind = "<F12>"
+let g:pymode_doc_bind = "<C-]>"
+let g:pymode_folding = 0
+let g:pymode_options_colorcolumn = 0
