@@ -229,6 +229,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'itspriddle/vim-stripper'
 Plugin 'vim-scripts/AutoComplPop'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
+Plugin 'vim-scripts/matchit.zip'
 Plugin 'klen/python-mode'
 
 Plugin 'tpope/vim-fugitive'
