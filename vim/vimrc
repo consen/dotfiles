@@ -113,6 +113,8 @@ set wrap
 " Automatically break a line before it gets too long.
 "set textwidth=82
 
+set listchars=nbsp:¬,tab:›·,precedes:«,extends:»,trail:▪
+
 " Keep 10 lines (top/bottom) for scope.
 set scrolloff=10
 
