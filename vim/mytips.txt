@@ -1,0 +1,67 @@
+*mytips*	For Vim version 7.4	2013-10-24 23:06:58
+
+
+		    My Amazing Vim Tips			       
+
+								by Consen~
+=============================================================================
+
+1. |unindent-comment| 
+2. |buffer-window-tabpage|
+3. |multiline-editing|
+4. |noremap-meaning|
+
+-----------------------------------------------------------------------------
+
+1. *unindent-comment*				2013-10-24 23:07:43
+
+When I input a comment line, press enter, the next line auto comment, add
+comment specifier and white, like this: >
+    // this is a comment line.
+    //
+<you see, it auto add "// ", so if I want to input code, I have to press the
+backspace key several times to move back. The tip is use ctrl+w to move the
+cursor back, and you can keep typing there.
+    CTRL-W
+
+-----------------------------------------------------------------------------
+
+2. *buffer-window-tabpage*			2013-10-26 14:30:00
+
+Summary:
+    A buffer is the in-memory text of a file.
+    A window is a viewport on a buffer.
+    A tab page is a collection of windows.
+
+-----------------------------------------------------------------------------
+
+3. *multiline-editing*				2013-10-28 23:13:11 [1]
+
+Since CTRL-V is used to paste, you can't use it to start a blockwise Visual
+selection.  You can use CTRL-Q instead.
+    CTRL-Q
+Visual mode: characterwise, linewise, blockwise.
+
+-----------------------------------------------------------------------------
+
+4. *noremap-meaning*				2013-10-28 23:22:37 [1]
+
+Note the use of ":noremap" instead of "map" to avoid a recursive mapping.
+
+-----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MODELINE	vim:tw=78:noet:ts=8:ft=help:norl:
