@@ -1,0 +1,5 @@
+vim is the best editor on linux.
+
+    to be a vimer,
+    then to be a developer.
+                            -- by consen
