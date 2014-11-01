@@ -320,9 +320,10 @@ colorscheme molokai
 " 139 hi Normal ctermfg=253     ctermbg=235
 
 hi String       ctermfg=186
+hi MatchParen   ctermfg=208     ctermbg=235     cterm=bold
+hi StatusLine   ctermfg=236     ctermbg=242     cterm=reverse
 hi Todo         ctermfg=231     ctermbg=NONE    cterm=inverse,bold
 hi Visual                       ctermbg=237
-hi StatusLine   ctermfg=236     ctermbg=242     cterm=reverse
 
 """""""""""""""""""""""""""""
 " Monokai
