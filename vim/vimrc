@@ -236,6 +236,7 @@ Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'klen/python-mode'
 Plugin 'Lokaltog/vim-easymotion'
+Plugin 'consen/vim-easyselect'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
