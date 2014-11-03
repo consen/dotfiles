@@ -247,7 +247,7 @@ Plugin 'jlanzarotta/bufexplorer'
 
 Plugin 'sickill/vim-monokai'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'tomasr/molokai'
+Plugin 'consen/molokai'
 
 Plugin 'junegunn/goyo.vim'
 Plugin 'yonchu/accelerated-smooth-scroll'
@@ -315,21 +315,7 @@ let g:ctrlp_custom_ignore = {
 """""""""""""""""""""""""""""
 set t_Co=256
 let g:molokai_original = 1
-"let g:rehash256 = 1
 colorscheme molokai
-" TODO In molokai.vim reset values:
-" 139 hi Normal ctermfg=253     ctermbg=235
-
-hi String       ctermfg=186
-hi MatchParen   ctermfg=208     ctermbg=235     cterm=bold
-hi StatusLine   ctermfg=236     ctermbg=242     cterm=reverse
-hi Todo         ctermfg=231     ctermbg=NONE    cterm=inverse,bold
-hi Visual                       ctermbg=237
-hi Pmenu        ctermfg=253     ctermbg=233
-hi PmenuSel     ctermfg=208     ctermbg=237     cterm=bold
-hi PmenuSbar                    ctermbg=234
-hi PmenuThumb   ctermfg=239     ctermbg=239
-hi WildMenu     ctermfg=208     ctermbg=237     cterm=bold
 
 """""""""""""""""""""""""""""
 " Monokai
