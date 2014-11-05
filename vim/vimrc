@@ -124,7 +124,7 @@ set scrolloff=10
 set splitbelow
 
 " Maximum number of items to show in the popup menu for Insert mode completion.
-set pumheight=15
+set pumheight=10
 
 " Always show the status line.
 set laststatus=2
