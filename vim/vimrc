@@ -235,6 +235,7 @@ Plugin 'itspriddle/vim-stripper'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'vim-scripts/matchit.zip'
 "Plugin 'klen/python-mode'
+"Plugin 'davidhalter/jedi-vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'consen/vim-easyselect'
 Plugin 'Valloric/YouCompleteMe'
@@ -365,6 +366,13 @@ let g:tagbar_autofocus = 1
 "let g:pymode_options_colorcolumn = 0
 "let g:pymode_lint_on_write = 0
 "let g:pymode_rope = 0
+
+""""""""""""""""""""
+" Jedi-vim
+"""""""""""""""""""""
+" let g:jedi#goto_definitions_command = "<F12>"
+" let g:jedi#documentation_command = "<C-]>"
+" let g:jedi#popup_select_first = 0
 
 """""""""""""""""""""""""""""
 " YouCompleteMe
