@@ -2,20 +2,24 @@
 	"installed_packages":
 	[
 		"AdvancedNewFile",
-		"Alignment",
+		"AlignTab",
 		"All Autocomplete",
+		"BracketHighlighter",
 		"ConvertToUTF8",
 		"DocBlockr",
 		"FindKeyConflicts",
+		"HexViewer",
 		"HTMLBeautify",
 		"Indent XML",
+		"JsFormat",
 		"Markdown Preview",
 		"PackageResourceViewer",
-		"PlainTasks",
 		"Python PEP8 Autoformat",
 		"StringUtilities",
 		"SublimeCodeIntel",
+		"SublimeLinter",
 		"SublimeREPL",
 		"Theme - Soda",
+		"TrailingSpaces"
 	]
 }
