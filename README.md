@@ -54,8 +54,10 @@ Place these files in Packages/User directory.
 
 ###### 1. vim-stripper
 
-Strip trailing whitespace:
+`:Strippper`: Strips trailing whitespaces current file or text selected in visual mode.
 
-```
-:Stripper
-```
+###### 2. NERDCommenter
+
+`,cc`: Comments out the current line or text selected in visual mode.
+`,cs`: Comments out the selected lines **sexily**.
+`,cu`: Uncomments the selected line(s).
