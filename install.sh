@@ -5,13 +5,15 @@
 # ~/.vimrc -> from/to/dotfiles/vim/vimrc
 # ~/.tmux.conf -> from/to/dotfiles/tmux/tmux.conf
 # ~/.gitconfig -> from/to/dotfiles/git/gitconfig
-# and install vim Plugins.
+# and install Vim plugins.
 #====================================================
 
 set -e
 
 backup_dir="$HOME/.dotfiles_backup"
 dotfiles="vimrc tmux.conf gitconfig"
+
+# TODO colorful echo
 
 # Backup old dotfiles
 echo "Creating $backup_dir for backup of any existing dotfiles in $HOME ..."
@@ -24,6 +26,8 @@ for file in $dotfiles; do
     	mv "$HOME/.$file" "$backup_dir"
     fi
 done
+
+echo
 
 # Get directory of file install.sh
 # So you can run install.sh in dotfiles directory -- ./install.sh
@@ -42,6 +46,10 @@ echo "Creating symlink ~/.gitconfig to $script_dir/git/gitconfig ..."
 ln -s "$script_dir/git/gitconfig" "$HOME/.gitconfig"
 echo "Done"
 
+echo
+
+# TODO setup git user.name and user.email
+
 # Install vim plugin Vundle
 if [[ ! -e ~/.vim/bundle/Vundle.vim ]]; then
     echo "Installing vim Plugin Vundle ..."
@@ -49,7 +57,8 @@ if [[ ! -e ~/.vim/bundle/Vundle.vim ]]; then
     echo "Done"
 fi
 
-function command_exists {
+function command_exists
+{
     hash "$1" 2>/dev/null
 }
 
@@ -58,6 +67,8 @@ if ! command_exists vim; then
     sudo apt-get install vim
     echo "Done"
 fi
+
+# TODO ignore vim read vimrc error
 
 echo "Using Vundle to install other vim plugins ..."
 vim +VundleInstall +qall
