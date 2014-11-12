@@ -15,6 +15,9 @@ dotfiles="vimrc tmux.conf gitconfig"
 
 # TODO colorful echo
 
+# TODO install git vim tmux
+# is OS Ubuntu ?
+
 # Backup old dotfiles
 echo "Creating $backup_dir for backup of any existing dotfiles in $HOME ..."
 mkdir -p "$backup_dir"
@@ -48,6 +51,8 @@ echo "Done"
 
 echo
 
+# TODO echo 'alias tmux="tmux -2"' >> ~/.bashrc
+# is alias tmux exists ?
 # TODO setup git user.name and user.email
 
 # Install vim plugin Vundle
