@@ -219,7 +219,7 @@ imap <F3> <C-R>=strftime("%Y-%m-%d %H:%M:%S [%w]")<CR>
 """"""""""""""""""""""""
 " TODO install Vundle
 " git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-set nocompatible              " be iMproved, required
+"set nocompatible            " be iMproved, required (have been set first)
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
