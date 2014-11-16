@@ -1,21 +1,14 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Maintainer: Consen
-" Last Change: 2014-10-22 10:13:13 [3]
-" Version: 0.9
+" Last Change: 2014-11-16 19:14:03 [0]
+" Version: 1.0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use Vim settings, rather than Vi settings(much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-" Setting working dirctory to user's home
-"cd ~
-
 " Set how many lines of history VIM has to remember.
 set history=2048
-
-" Enable filetype plugins.
-filetype plugin on
-filetype indent on
 
 " Set to auto read when a file is changed from the outside.
 set autoread
@@ -66,19 +59,19 @@ set smartcase
 
 " GUI Settings
 if has("gui_running")
-	set guioptions-=T			" No Toolbar
-	set guioptions-=e			" use non-GUI tab pages line
-	set guioptions+=c			" Use console dialogs instead of popup dialogs
-	set guioptions-=rL			" no left-hand and right-hand scrollbar
-	set guifont=Consolas:h11	" Fontface and fontsize
+    set guioptions-=T           " No Toolbar
+    set guioptions-=e           " use non-GUI tab pages line
+    set guioptions+=c           " Use console dialogs instead of popup dialogs
+    set guioptions-=rL          " no left-hand and right-hand scrollbar
+    set guifont=Consolas:h11    " Fontface and fontsize
 endif
+
+" Initial window size
+"set lines=34 columns=124
 
 " Hightlight current line and column.
 set cursorline
 "set cursorcolumn
-
-" Initial window size
-"set lines=34 columns=124
 
 " Use UTF-8
 set encoding=utf-8
@@ -130,20 +123,20 @@ set pumheight=10
 set laststatus=2
 " Format the status line.
 set statusline=
-"set statusline+=[CWD:\ %{getcwd()}]			" current working directory
-"set statusline+=\ \ \ \ [%n/%{bufnr('$')}]		" buffer number / buffer count
-set statusline+=[%n/%{bufnr('$')}]		        " buffer number / buffer count
-set statusline+=%r								" read only flag
-set statusline+=[%F]							" full path
-set statusline+=\ [%{strlen(&ft)?&ft:'none'}]	" filetype
-set statusline+=\ \ %m							" modified flag
-set statusline+=%{(&key==\"\"?\"\":'[encr]')}	" encrypted ?
-set statusline+=\ \ %w							" preview window flag
-set statusline+=%=								" right align remainder
-set statusline+=[%l/%L,%c]						" line number/lines, column number
-set statusline+=[0x%02B]						" character value under the cursor
-set statusline+=\ \ [%{&fileformat}]			" file format
-set statusline+=\ [%{&fenc==\"\"?&enc:&fenc}]	" encoding
+"set statusline+=[CWD:\ %{getcwd()}]            " current working directory
+"set statusline+=\ \ \ \ [%n/%{bufnr('$')}]     " buffer number / buffer count
+set statusline+=[%n/%{bufnr('$')}]              " buffer number / buffer count
+set statusline+=%r                              " read only flag
+set statusline+=[%F]                            " full path
+set statusline+=\ [%{strlen(&ft)?&ft:'none'}]   " filetype
+set statusline+=\ \ %m                          " modified flag
+set statusline+=%{(&key==\"\"?\"\":'[encr]')}   " encrypted ?
+set statusline+=\ \ %w                          " preview window flag
+set statusline+=%=                              " right align remainder
+set statusline+=[%l/%L,%c]                      " line number/lines, column number
+set statusline+=[0x%02B]                        " character value under the cursor
+set statusline+=\ \ [%{&fileformat}]            " file format
+set statusline+=\ [%{&fenc==\"\"?&enc:&fenc}]   " encoding
 
 " Turn backup off, since most stuff is in SVN,GIT,etc.anyway...
 set nobackup
@@ -183,33 +176,6 @@ imap <F3> <C-R>=strftime("%Y-%m-%d %H:%M:%S [%w]")<CR>
 " character no.13 and M is the 14th letter of the alphabet. see :h key-notation
 "nnoremap <silent> <CR> @=(foldlevel('.')?'za':'ctrl-m')<CR>
 
-
-" Save session whenever vim closes.
-"autocmd VimLeave * call SaveSession()
-" Load session when vim is opened.
-" If you omit 'options' from 'sessionoptions', you might want to use nested flag
-" from VimEnter autocmd, Syntax highlighting and mappings might not be restored
-" otherwise.
-"autocmd VimEnter * nested call OpenSession()
-
-"let g:session_file = $HOME."/.session.vim"
-
-"function! SaveSession()
-"	execute "mksession! ".g:session_file
-"endfunction
-
-" Open a saved session if there were no file-names passed as arguments.
-"function! OpenSession()
-"	if argc() == 0
-"		" if session file exists, ask user if he wants to load it
-"		if filereadable(g:session_file)
-"			"if(confirm("Load last session?\n\n".g:session_file, "&Yes\n&No", 1) == 1)
-"				execute "source ".g:session_file
-"			"endif
-"		endif
-"	endif
-"endfunction
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -217,9 +183,6 @@ imap <F3> <C-R>=strftime("%Y-%m-%d %H:%M:%S [%w]")<CR>
 """"""""""""""""""""""""
 " Vundle
 """"""""""""""""""""""""
-" TODO install Vundle
-" git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-"set nocompatible            " be iMproved, required (have been set first)
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -231,9 +194,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-
 " plugin on GitHub repo
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/nerdcommenter.git'
@@ -241,11 +201,8 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'tpope/vim-surround'
 Plugin 'godlygeek/tabular'
 Plugin 'itspriddle/vim-stripper'
-"Plugin 'vim-scripts/AutoComplPop'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'vim-scripts/matchit.zip'
-"Plugin 'klen/python-mode'
-"Plugin 'davidhalter/jedi-vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'consen/vim-easyselect'
 Plugin 'Valloric/YouCompleteMe'
@@ -259,43 +216,18 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'sjl/gundo.vim'
 Plugin 'jlanzarotta/bufexplorer'
 
-Plugin 'sickill/vim-monokai'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'consen/molokai'
 
 Plugin 'junegunn/goyo.vim'
 Plugin 'yonchu/accelerated-smooth-scroll'
 Plugin 'kien/rainbow_parentheses.vim'
-"Bundle 'msanders/snipmate.vim'
-"Bundle 'uguu-org/vim-matrix-screensaver'
-"Bundle 'bling/vim-airline'
-
-" plugin from http://vim-scripts.org/vim/scripts.html
-"Plugin 'L9'
-" Git plugin not hosted on GitHub
-"Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-"Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Avoid a name conflict with L9"
-"Plugin 'user/L9', {'name': 'newL9'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
-"
-" Brief help
-" :PluginList          - list configured plugins
-" :PluginInstall(!)    - install (update) plugins
-" :PluginSearch(!) foo - search (or refresh cache first) for foo
-" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 
 """""""""""""""""""""""""""""
 " Goyo
@@ -321,8 +253,8 @@ let g:ctrlp_custom_ignore = {
 """""""""""""""""""""""""""""
 "set background=dark
 "colorscheme solarized
-"let g:solarized_menu=1		" menu 'Solarized'
-"call togglebg#map("<F5>")	" press F5 to Toggle Background
+"let g:solarized_menu=1     " menu 'Solarized'
+"call togglebg#map("<F5>")  " press F5 to Toggle Background
 
 """""""""""""""""""""""""""""
 " Molokai
@@ -330,16 +262,6 @@ let g:ctrlp_custom_ignore = {
 set t_Co=256
 let g:molokai_original = 1
 colorscheme molokai
-
-"""""""""""""""""""""""""""""
-" Monokai
-"""""""""""""""""""""""""""""
-"colorscheme monokai
-
-"""""""""""""""""""""""""""""
-" SnipMate
-"""""""""""""""""""""""""""""
-"let g:snips_author = 'Consen'
 
 """""""""""""""""""""""""""""
 " NERDTree
@@ -353,11 +275,6 @@ let NERDTreeIgnore=['\~$', '\.o$', '\.so$', '\.a$', '\.exe$', '\.pyc$']
 let delimitMate_matchpairs = "(:),[:],{:}"
 
 """""""""""""""""""""""""""""
-" AutoComplPop
-"""""""""""""""""""""""""""""
-let g:acp_behaviorKeywordLength = 1
-
-"""""""""""""""""""""""""""""
 " Stripper
 """""""""""""""""""""""""""""
 let g:StripperNoStripOnSave = 1
@@ -369,24 +286,6 @@ nnoremap <silent> <F9> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 
 """""""""""""""""""""""""""""
-" Python-mode
-"""""""""""""""""""""""""""""
-"let g:pymode_run_bind = "<F5>"
-"let g:pymode_rope_goto_definition_bind = "<F12>"
-"let g:pymode_doc_bind = "<C-]>"
-"let g:pymode_folding = 0
-"let g:pymode_options_colorcolumn = 0
-"let g:pymode_lint_on_write = 0
-"let g:pymode_rope = 0
-
-""""""""""""""""""""
-" Jedi-vim
-"""""""""""""""""""""
-" let g:jedi#goto_definitions_command = "<F12>"
-" let g:jedi#documentation_command = "<C-]>"
-" let g:jedi#popup_select_first = 0
-
-"""""""""""""""""""""""""""""
 " YouCompleteMe
 """""""""""""""""""""""""""""
 let g:ycm_autoclose_preview_window_after_completion = 1
@@ -395,6 +294,9 @@ nnoremap <F12> :YcmCompleter GoToDefinition<CR>
 let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
 
+"""""""""""""""""""""""""""""
+" UltiSnips
+"""""""""""""""""""""""""""""
 let g:UltiSnipsExpandTrigger="<Tab>"
 let g:UltiSnipsJumpForwardTrigger="<Tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
