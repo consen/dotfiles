@@ -29,7 +29,7 @@ syntax on
 
 " Show line numbers.
 set number
-set numberwidth=6
+set numberwidth=4
 
 " Automatically wrap left and right.
 set whichwrap+=<,>,h,l,[,]
@@ -249,6 +249,8 @@ Plugin 'vim-scripts/matchit.zip'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'consen/vim-easyselect'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
@@ -390,3 +392,9 @@ let g:tagbar_autofocus = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_min_num_of_chars_for_completion = 1
 nnoremap <F12> :YcmCompleter GoToDefinition<CR>
+let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
+
+let g:UltiSnipsExpandTrigger="<Tab>"
+let g:UltiSnipsJumpForwardTrigger="<Tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
