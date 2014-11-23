@@ -24,7 +24,7 @@ echo_error() {
 }
 
 echo_user() {
-    echo -e "  [ ${color_yellow}?${color_end} ] $1"
+    echo -ne "  [ ${color_yellow}?${color_end} ] $1"
 }
 
 echo_info() {
@@ -35,7 +35,6 @@ command_exists() {
     hash "$1" 2>/dev/null
 }
 
-# is OS Ubuntu ?
 install_command() {
     echo_info "You have not install $1, install it for you."
     sudo apt-get install $1
@@ -83,9 +82,18 @@ echo_ok "Creating symlink ~/.gitconfig to $script_dir/git/gitconfig."
 
 echo
 
-# TODO echo 'alias tmux="tmux -2"' >> ~/.bashrc
-# is alias tmux exists ?
-# TODO setup git user.name and user.email
+echo_user "Reset git user name and email? [y/n]"
+read git_reset
+if [[ "${git_reset}" == "y" ]]; then
+    echo_user "Your git user name :"
+    read git_user_name
+    git config --global user.name "${git_user_name}"
+    echo_ok "Set git user.name to ${git_user_name}"
+    echo_user "Your git user email :"
+    read git_user_email
+    git config --global user.email "${git_user_email}"
+    echo_ok "Set git user.email to ${git_user_email}"
+fi
 
 # Install vim plugin Vundle
 if [[ ! -e ~/.vim/bundle/Vundle.vim ]]; then
@@ -93,8 +101,6 @@ if [[ ! -e ~/.vim/bundle/Vundle.vim ]]; then
     git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     echo_ok "Vundle installed."
 fi
-
-# TODO ignore vim read vimrc error
 
 echo_info "Using Vundle to install other vim plugins ..."
 vim +VundleInstall +qall
@@ -108,4 +114,4 @@ sudo apt-get install build-essential python-dev cmake
 echo_info "Compiling YouCompleteMe ..."
 ~/.vim/bundle/YouCompleteMe/install.sh --clang-completer
 
-echo_ok "All Installed."
+echo_ok "All Installed!"
