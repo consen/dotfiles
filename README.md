@@ -1,7 +1,6 @@
-# dotfiles (工欲善其事，必先利其器)
+# dotfiles 「欲善其事，必先利其器」
 
 Backup, restore, and sync the prefs and settings for my toolbox.
-
 ## Installation
 
 
@@ -54,10 +53,14 @@ Place these files in Packages/User directory.
 
 ###### 1. vim-stripper
 
-`:Strippper`: Strips trailing whitespaces current file or text selected in visual mode.
+* `:Strippper`: Strips trailing whitespaces current file or text selected in visual mode.
 
 ###### 2. NERDCommenter
 
-`,cc`: Comments out the current line or text selected in visual mode.
-`,cs`: Comments out the selected lines **sexily**.
-`,cu`: Uncomments the selected line(s).
+* `,cc`: Comments out the current line or text selected in visual mode.
+* `,cs`: Comments out the selected lines **sexily**.
+* `,cu`: Uncomments the selected line(s).
+
+###### 3. vim-flake8
+
+* `<F7>`: Check syntax and style for Python source code.
