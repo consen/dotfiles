@@ -108,6 +108,10 @@ vim +VundleInstall +qall
 echo_info "Installing exuberant-ctags for vim plugin TagBar ..."
 sudo apt-get install exuberant-ctags
 
+echo_info "Installing python-pip and flake8 for vim plugin vim-flake8"
+sudo apt-get install python-pip
+sudo pip install flake8
+
 echo_info "Installing build-essential, python-dev, cmake for compiling YouCompleteMe ..."
 sudo apt-get install build-essential python-dev cmake
 
