@@ -48,16 +48,6 @@ install_command() {
     fi
 }
 
-install_python_package() {
-    if [[ "${os_type}" == "Ubuntu" ]]; then
-        sudo pip install $@
-        echo_ok "$@ installed."
-    else
-        echo_error "Install $@ yourself and retry."
-        exit 1
-    fi
-}
-
 for tool in git vim tmux; do
     if ! command_exists $tool; then
         install_command $tool
@@ -126,7 +116,7 @@ install_command exuberant-ctags
 
 echo_info "Installing python-pip and flake8 for vim plugin vim-flake8"
 install_command python-pip
-install_python_package flake8
+sudo pip install flake8
 
 echo_info "Installing build-essential, python-dev, cmake for compiling YouCompleteMe ..."
 install_command build-essential python-dev cmake
