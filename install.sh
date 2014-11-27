@@ -1,10 +1,11 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #====================================================
 # Install dotfiles, create symbol links:
 # ~/.vimrc -> from/to/dotfiles/vim/vimrc
 # ~/.tmux.conf -> from/to/dotfiles/tmux/tmux.conf
 # ~/.gitconfig -> from/to/dotfiles/git/gitconfig
+# and install some essential tools.
 #====================================================
 
 set -e
@@ -35,12 +36,27 @@ command_exists() {
     hash "$1" 2>/dev/null
 }
 
+os_type=$(lsb_release -si)
+
 install_command() {
-    echo_info "You have not install $1, install it for you."
-    sudo apt-get install $1
-    echo_ok "$1 installed."
+    if [[ "${os_type}" == "Ubuntu" ]]; then
+        sudo apt-get install $@
+        echo_ok "$@ installed."
+    else
+        echo_error "Install $@ yourself and retry."
+        exit 1
+    fi
 }
 
+install_python_package() {
+    if [[ "${os_type}" == "Ubuntu" ]]; then
+        sudo pip install $@
+        echo_ok "$@ installed."
+    else
+        echo_error "Install $@ yourself and retry."
+        exit 1
+    fi
+}
 
 for tool in git vim tmux; do
     if ! command_exists $tool; then
@@ -106,14 +122,14 @@ echo_info "Using Vundle to install other vim plugins ..."
 vim +VundleInstall +qall
 
 echo_info "Installing exuberant-ctags for vim plugin TagBar ..."
-sudo apt-get install exuberant-ctags
+install_command exuberant-ctags
 
 echo_info "Installing python-pip and flake8 for vim plugin vim-flake8"
-sudo apt-get install python-pip
-sudo pip install flake8
+install_command python-pip
+install_python_package flake8
 
 echo_info "Installing build-essential, python-dev, cmake for compiling YouCompleteMe ..."
-sudo apt-get install build-essential python-dev cmake
+install_command build-essential python-dev cmake
 
 echo_info "Compiling YouCompleteMe ..."
 ~/.vim/bundle/YouCompleteMe/install.sh --clang-completer
