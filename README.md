@@ -22,7 +22,7 @@ from/to/dotfiles/tmux/tmux.conf -> ~/.tmux.conf
 from/to/dotfiles/git/gitconfig -> ~/.gitconfig
 ```
 
-If you use other Linux distribution you can read install.sh and install essential tools manually.
+If you use other Linux distribution, when you run install.sh it will prompt you to install essential tools manually.
 
 Now you can use your brand new and amazing **vim**. The color scheme is [molokai][molokai], it works well in terminal vim(not GUI version such as GVim), I have refined molokai.vim to make molokai more monokai.
 
@@ -54,7 +54,7 @@ Workflow
 
 - `:PluginInstall`: Installs vim plugins.
 - `:PluginUpdate`: Updates vim plugins.
-- `:PluginClean`: Remove unused vim plugins.
+- `:PluginClean`: Removes unused vim plugins.
 
 ###### 1. vim-stripper
 
@@ -91,6 +91,5 @@ Workflow
 
 - `:Gvdiff`: To see what have changed. 
 
-[vundle]: https://github.com/gmarik/Vundle.vim
 [molokai]: https://github.com/consen/molokai
 [package-control]: https://sublime.wbond.net
