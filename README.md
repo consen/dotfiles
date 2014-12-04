@@ -48,7 +48,7 @@ Place these files in Packages/User directory.
 Workflow
 --------
 
-#### Vim
+#### Vim (Dark Vim User)
 
 ###### 0. Vundle
 
@@ -90,6 +90,11 @@ Workflow
 ###### 8. vim-fugitive
 
 - `:Gvdiff`: To see what have changed. 
+
+###### 9. vim-multiple-cursors
+- `<Ctrl-n>, <Ctrl-p>, <Ctrl-x>`: Places multiple cursors in Normal mode.
+- `c`: Changes multiple selections.
+- `v`: Goes to Normal mode, `h, l`: to move cursor, `i, I, a, A` to edit.
 
 [molokai]: https://github.com/consen/molokai
 [package-control]: https://sublime.wbond.net
