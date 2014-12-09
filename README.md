@@ -85,16 +85,21 @@ Workflow
 
 ###### 7. vim-easymotion
 
-- `,,f`char: Highlights all chars and enter char to go to the char.   
+- `,,f`char: Highlights all chars and enter char to go to the char.
 
 ###### 8. vim-fugitive
 
 - `:Gvdiff`: To see what have changed. 
 
 ###### 9. vim-multiple-cursors
+
 - `<Ctrl-n>, <Ctrl-p>, <Ctrl-x>`: Places multiple cursors in Normal mode.
 - `c`: Changes multiple selections.
-- `v`: Goes to Normal mode, `h, l`: to move cursor, `i, I, a, A` to edit.
+- `v`: Goes to Normal mode, `h, l`: to move cursor, `i, I, a, A`: to edit.
+
+###### 10. tabular
+
+- `:Tabularize /=`: Aligns lines at `=`.
 
 [molokai]: https://github.com/consen/molokai
 [package-control]: https://sublime.wbond.net
