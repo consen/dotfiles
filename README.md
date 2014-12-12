@@ -99,7 +99,13 @@ Workflow
 
 ###### 10. tabular
 
-- `:Tabularize /=`: Aligns lines at `=`.
+- `:Tabularize /=`: Aligns [selected] lines at `=`.
+
+###### 11. vim-surround
+
+- `cs"'`: `"hello world!" -> 'hello world!'`
+- `ds(`: `(true) -> true`
+- `ysw"`: `hello -> "hello"`
 
 [molokai]: https://github.com/consen/molokai
 [package-control]: https://sublime.wbond.net
