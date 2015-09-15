@@ -11,7 +11,13 @@ Installation
 If you are on Ubuntu x64, just run:
 
 ```
-./install.sh
+./install_for_ubuntu.sh
+```
+
+If you are on CentOS x64, just run:
+
+```
+./install_for_centos.sh
 ```
 
 It will create three symbol links and install some essential tools.
@@ -22,7 +28,7 @@ from/to/dotfiles/tmux/tmux.conf -> ~/.tmux.conf
 from/to/dotfiles/git/gitconfig -> ~/.gitconfig
 ```
 
-If you use other Linux distribution, when you run install.sh it will prompt you to install essential tools manually.
+If you use other Linux distribution, when you run install_for_xxx.sh it will prompt you to install essential tools manually.
 
 Now you can use your brand new and amazing **vim**. The color scheme is [molokai][molokai], it works well in terminal vim(not GUI version such as GVim), I have refined molokai.vim to make molokai more monokai.
 
