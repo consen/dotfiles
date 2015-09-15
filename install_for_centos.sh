@@ -106,6 +106,13 @@ if [[ ! -e ~/.vim/bundle/Vundle.vim ]]; then
     echo_ok "Vundle installed."
 fi
 
+# Install tmux plugim tpm
+if [[ ! -e ~/.tmux/plugins/tpm ]]; then
+    echo_info "You have not install tmux plugin tpm, install it for you."
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    echo_ok "tpm installed."
+fi
+
 echo_info "Using Vundle to install other vim plugins ..."
 vim +VundleInstall +qall
 
