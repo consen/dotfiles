@@ -1,7 +1,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Maintainer: Consen
 " Last Change: 2014-11-16 19:14:03 [0]
-" Version: 1.0
+" Version: 1.1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use Vim settings, rather than Vi settings(much better!).
 " This must be first, because it changes other options as a side effect.
@@ -181,56 +181,56 @@ imap <F3> <C-R>=strftime("%Y-%m-%d %H:%M:%S [%w]")<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""
-" Vundle
+" vim-plug
 """"""""""""""""""""""""
-filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+" Install vim-plug if we don't arlready have it
+if empty(glob('~/.vim/autoload/plug.vim'))
+    " Ensure all needed directories exist
+    execute '!mkdir -pv ~/.vim/plugged'
+    execute '!mkdir -pv ~/.vim/autoload'
+    " Download the actual plugin manager
+    execute '!curl -fLo ~/.vim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim'
+endif
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+call plug#begin('~/.vim/plugged')
+
+" Make sure you use single quotes
 
 " plugin on GitHub repo
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'scrooloose/nerdcommenter.git'
-Plugin 'Raimondi/delimitMate'
-Plugin 'tpope/vim-surround'
-Plugin 'godlygeek/tabular'
-Plugin 'itspriddle/vim-stripper'
-Plugin 'vim-scripts/DoxygenToolkit.vim'
-Plugin 'vim-scripts/matchit.zip'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'consen/vim-easyselect'
-Plugin 'kopischke/vim-fetch'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'nvie/vim-flake8'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'scrooloose/nerdcommenter'
+Plug 'Raimondi/delimitMate'
+Plug 'tpope/vim-surround'
+Plug 'godlygeek/tabular'
+Plug 'itspriddle/vim-stripper'
+Plug 'vim-scripts/DoxygenToolkit.vim'
+Plug 'vim-scripts/matchit.zip'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'consen/vim-easyselect'
+"Plun 'Valloric/YouCompleteMe'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'nvie/vim-flake8'
+Plug 'kopischke/vim-fetch'
 
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'majutsushi/tagbar'
-Plugin 'kien/ctrlp.vim'
-Plugin 'sjl/gundo.vim'
-Plugin 'jlanzarotta/bufexplorer'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/nerdtree'
+Plug 'majutsushi/tagbar'
+Plug 'kien/ctrlp.vim'
+Plug 'sjl/gundo.vim'
+Plug 'jlanzarotta/bufexplorer'
 
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'consen/molokai'
+Plug 'altercation/vim-colors-solarized'
+Plug 'consen/molokai'
 
-Plugin 'junegunn/goyo.vim'
-Plugin 'yonchu/accelerated-smooth-scroll'
-Plugin 'kien/rainbow_parentheses.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'yonchu/accelerated-smooth-scroll'
+Plug 'kien/rainbow_parentheses.vim'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
+" Add plugins to &runtimepath
+call plug#end()
 
 """""""""""""""""""""""""""""
 " Goyo
@@ -291,11 +291,11 @@ let g:tagbar_autofocus = 1
 """""""""""""""""""""""""""""
 " YouCompleteMe
 """""""""""""""""""""""""""""
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_min_num_of_chars_for_completion = 1
-nnoremap <F12> :YcmCompleter GoToDefinition<CR>
-let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
+"let g:ycm_autoclose_preview_window_after_completion = 1
+"let g:ycm_min_num_of_chars_for_completion = 1
+"nnoremap <F12> :YcmCompleter GoToDefinition<CR>
+"let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
+"let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
 
 """""""""""""""""""""""""""""
 " UltiSnips

@@ -101,11 +101,13 @@ if [[ "${git_reset}" == "y" ]]; then
     echo_ok "Set git user.email to ${git_user_email}"
 fi
 
-# Install vim plugin Vundle
-if [[ ! -e ~/.vim/bundle/Vundle.vim ]]; then
-    echo_info "You have not install vim plugin Vundle, install it for you."
-    git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-    echo_ok "Vundle installed."
+# Install vim-plug
+if [[ ! -e ~/.vim/autoload/plug.vim ]]; then
+    echo_info "You have not install vim-plug, install it for you."
+    mkdir -pv ~/.vim/autoload
+    mkdir -pv ~/.vim/plugged
+    wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim -O ~/.vim/autoload/plug.vim
+    echo_ok "vim-plug installed."
 fi
 
 # Install tmux plugim tpm
@@ -115,8 +117,8 @@ if [[ ! -e ~/.tmux/plugins/tpm ]]; then
     echo_ok "tpm installed."
 fi
 
-echo_info "Using Vundle to install other vim plugins ..."
-vim +VundleInstall +qall
+echo_info "Using vim-plug to install other vim plugins ..."
+vim +PlugInstall +qall
 
 echo_info "Installing exuberant-ctags for vim plugin TagBar ..."
 install_command exuberant-ctags
@@ -129,6 +131,6 @@ echo_info "Installing build-essential, python-dev, cmake for compiling YouComple
 install_command build-essential python-dev cmake
 
 echo_info "Compiling YouCompleteMe ..."
-~/.vim/bundle/YouCompleteMe/install.sh --clang-completer
+~/.vim/plugged/YouCompleteMe/install.sh --clang-completer
 
 echo_ok "All Installed!"

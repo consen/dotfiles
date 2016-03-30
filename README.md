@@ -56,11 +56,12 @@ Workflow
 
 #### Vim (Dark Vim User)
 
-###### 0. Vundle
+###### 0. vim-plug
 
-- `:PluginInstall`: Installs vim plugins.
-- `:PluginUpdate`: Updates vim plugins.
-- `:PluginClean`: Removes unused vim plugins.
+- `:PlugInstall`: Installs plugins.
+- `:PlugUpdate`: Install or updates plugins.
+- `:PlugClean`: Removes unused plugins.
+- `:PlugUpgrade`: Upgrade vim-plug itself
 
 ###### 1. vim-stripper
 
