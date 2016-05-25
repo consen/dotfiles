@@ -215,6 +215,7 @@ Plug 'nvie/vim-flake8'
 Plug 'kopischke/vim-fetch'
 
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-markdown'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
 Plug 'majutsushi/tagbar'
