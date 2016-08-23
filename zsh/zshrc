@@ -89,7 +89,7 @@ SPACESHIP_PROMPT_SYMBOL=$
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git virtualenvwrapper nvm colored-man-pages)
+plugins=(git virtualenvwrapper nvm colored-man-pages zsh-autosuggestions)
 
 # User configuration
 
@@ -97,6 +97,8 @@ plugins=(git virtualenvwrapper nvm colored-man-pages)
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+
+export TERM='xterm-256color'
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
