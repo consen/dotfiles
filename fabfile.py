@@ -25,6 +25,9 @@ def install_tmux():
     
     with settings(warn_only = True):
         # prepare install/ in advance
+        if not os.path.exists("install"):
+            print "Please prepare install directory and %s and %s tar.gz in advance." % (libevent, tmux)
+            return
         local("tar -czvf tmux.tgz install/%s.tar.gz install/%s.tar.gz" % (libevent, tmux))
         put("tmux.tgz")
         run("tar -xzvf tmux.tgz")
@@ -34,5 +37,6 @@ def install_tmux():
         put("tmux/tmux.conf", "~/.tmux.conf")
         run("echo \"alias tmux='tmux -2'\" >> ~/.bashrc")
         sudo("rm -rf install")
+        run("rm tmux.tgz")
         local("rm tmux.tgz")
 
