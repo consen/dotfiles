@@ -47,12 +47,16 @@ BULLETTRAIN_HG_SHOW=false
 # Prompt
 SPACESHIP_PROMPT_SYMBOL=$
 # Git
+SPACESHIP_GIT_SYMBOL=""
 SPACESHIP_GIT_UNPUSHED="↑"
 SPACESHIP_GIT_UNPULLED="↓"
 # Nvm
 SPACESHIP_NVM_SYMBOL="♦"
 # Ruby
 SPACESHIP_RUBY_SYMBOL="◊"
+# Venv
+SPACESHIP_VENV_SYMBOL="Ϩ"
+
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
