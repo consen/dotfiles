@@ -5,8 +5,8 @@
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="spaceship"
-ZSH_THEME="bullet-train"
+ZSH_THEME="spaceship"
+#ZSH_THEME="bullet-train"
 
 # bullet-train theme options
 # Status
@@ -46,6 +46,13 @@ BULLETTRAIN_HG_SHOW=false
 # spaceship theme options
 # Prompt
 SPACESHIP_PROMPT_SYMBOL=$
+# Git
+SPACESHIP_GIT_UNPUSHED=" ↑"
+SPACESHIP_GIT_UNPULLED=" ↓"
+# Nvm
+SPACESHIP_NVM_SYMBOL="♦"
+# Ruby
+SPACESHIP_RUBY_SYMBOL="◊"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
