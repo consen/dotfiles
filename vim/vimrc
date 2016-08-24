@@ -213,6 +213,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'nvie/vim-flake8'
 Plug 'kopischke/vim-fetch'
+Plug 'dhruvasagar/vim-table-mode'
 
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-markdown'
@@ -304,3 +305,9 @@ let g:tagbar_autofocus = 1
 let g:UltiSnipsExpandTrigger="<Tab>"
 let g:UltiSnipsJumpForwardTrigger="<Tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
+
+"""""""""""""""""""""""""""""
+" vim-table-mode
+"""""""""""""""""""""""""""""
+let g:table_mode_corner_corner="+"
+let g:table_mode_header_fillchar="="
