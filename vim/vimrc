@@ -200,7 +200,7 @@ call plug#begin('~/.vim/plugged')
 " plugin on GitHub repo
 Plug 'terryma/vim-multiple-cursors'
 Plug 'scrooloose/nerdcommenter'
-Plug 'Raimondi/delimitMate'
+Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
 Plug 'itspriddle/vim-stripper'
@@ -273,11 +273,6 @@ colorscheme molokai
 """""""""""""""""""""""""""""
 nnoremap <silent> <F8> :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\~$', '\.o$', '\.so$', '\.a$', '\.exe$', '\.pyc$']
-
-"""""""""""""""""""""""""""""
-" delimitMate
-"""""""""""""""""""""""""""""
-let delimitMate_matchpairs = "(:),[:],{:}"
 
 """""""""""""""""""""""""""""
 " Stripper
