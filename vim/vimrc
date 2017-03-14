@@ -129,6 +129,7 @@ set statusline=
 "set statusline+=\ \ \ \ [%n/%{bufnr('$')}]     " buffer number / buffer count
 set statusline+=[%n/%{bufnr('$')}]              " buffer number / buffer count
 set statusline+=%r                              " read only flag
+set statusline+=%{fugitive#statusline()}        " current git branch
 set statusline+=[%F]                            " full path
 set statusline+=\ [%{strlen(&ft)?&ft:'none'}]   " filetype
 set statusline+=\ \ %m                          " modified flag
