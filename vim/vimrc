@@ -12,6 +12,8 @@ set history=2048
 
 " Set to auto read when a file is changed from the outside.
 set autoread
+" Auto write the contents of the file if it has been modified on each :make.
+set autowrite
 
 " With a map leader it's possible to do extra key combinations
 let mapleader = ","
@@ -214,6 +216,7 @@ Plug 'honza/vim-snippets'
 Plug 'nvie/vim-flake8'
 Plug 'kopischke/vim-fetch'
 Plug 'dhruvasagar/vim-table-mode'
+Plug 'fatih/vim-go'
 
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-markdown'
@@ -306,3 +309,8 @@ let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
 """""""""""""""""""""""""""""
 let g:table_mode_corner_corner="+"
 let g:table_mode_header_fillchar="="
+
+"""""""""""""""""""""""""""""
+" vim-go
+"""""""""""""""""""""""""""""
+let g:go_fmt_command = "goimports"
