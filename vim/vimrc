@@ -221,6 +221,7 @@ Plug 'fatih/vim-go'
 
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-markdown'
+Plug 'stephpy/vim-yaml'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
 Plug 'majutsushi/tagbar'
