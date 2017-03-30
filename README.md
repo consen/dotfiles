@@ -36,7 +36,7 @@ Now you can use your brand new and amazing **vim**. The color scheme is [molokai
 
 #### xShell
 
-In menu **Tools**, open **Color Schemes** dialog, then **Import** xShell_color_scheme.xcs, select **taste** in color scheme list.
+In menu **Tools**, open **Color Schemes** dialog, then **Import** color-scheme-XTerm-consen.xcs, select **XTerm-consen** in color scheme list.
 
 ![xShell screenshot](img/xShell.png)
 
