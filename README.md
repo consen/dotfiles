@@ -23,9 +23,9 @@ If you are on CentOS x64, just run:
 It will create three symbol links and install some essential tools.
 
 ```
-from/to/dotfiles/vim/vimrc -> ~/.vimrc
-from/to/dotfiles/tmux/tmux.conf -> ~/.tmux.conf
-from/to/dotfiles/git/gitconfig -> ~/.gitconfig
+~/.vimrc -> path/to/dotfiles/vim/vimrc
+~/.tmux.conf -> path/to/dotfiles/tmux/tmux.conf
+~/.gitconfig -> path/to/dotfiles/git/gitconfig
 ```
 
 If you use other Linux distribution, when you run install_for_xxx.sh it will prompt you to install essential tools manually.
