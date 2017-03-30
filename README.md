@@ -49,7 +49,6 @@ Place these files in Packages/User directory.
 
 1. Preferences.sublime-settings ---- `Preferences > Setttings - User`
 2. Package Control.sublime-settings ---- `Preferences > Package Settings > Package Control > Settings – User`, installed packages. (First install [Package Control][package-control])
-3. Default(Windows).sublime-keymap ---- `Preferences > Key Bindings - User`
 
 Workflow
 --------

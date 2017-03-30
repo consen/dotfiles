@@ -1,27 +1,17 @@
 {
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
 	"installed_packages":
 	[
-		"AdvancedNewFile",
+		"A File Icon",
 		"AlignTab",
-		"All Autocomplete",
-		"BracketHighlighter",
 		"ConvertToUTF8",
-		"DocBlockr",
-		"FindKeyConflicts",
-		"Git",
-		"HexViewer",
-		"HTMLBeautify",
-		"Indent XML",
-		"JsFormat",
+		"GitGutter",
 		"Markdown Preview",
-		"PackageResourceViewer",
-		"Python PEP8 Autoformat",
-		"SFTP",
+		"Package Control",
 		"StringUtilities",
-		"SublimeCodeIntel",
-		"SublimeLinter",
-		"SublimeREPL",
-		"Theme - Soda",
-		"TrailingSpaces"
+		"Theme - Soda"
 	]
 }
