@@ -226,6 +226,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
 Plug 'majutsushi/tagbar'
 Plug 'kien/ctrlp.vim'
+Plug 'rking/ag.vim'
 Plug 'sjl/gundo.vim'
 Plug 'jlanzarotta/bufexplorer'
 
