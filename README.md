@@ -1,5 +1,5 @@
-dotfiles 「工欲善其事，必先利其器」
-==================================
+dotfiles
+========
 
 Backup, restore, and sync the prefs and settings for my toolbox.
 
